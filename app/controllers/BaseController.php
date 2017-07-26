@@ -13,11 +13,12 @@ class BaseController{
         $view = $this->view;
         if ( $view instanceof View ) {
             $this->view
-            ->withTitle('lws的网站');
+            ->withTitle('lws的网站')
+            ->withBootstrap('/twbs/bootstrap/');
             extract($view->data);
-            require VIEW_PATH.'/layouts/header.php';
+            require VIEW_PATH.'layouts/header.php';
             require $view->view;
-            require VIEW_PATH.'/layouts/footer.php';
+            require VIEW_PATH.'layouts/footer.php';
         }
     }
 }

@@ -8,7 +8,7 @@ define('BASE_PATH', __DIR__);
 // Autoload 自动载入
 require BASE_PATH.'/vendor/autoload.php';
 
-// Eloquent ORM
+// Eloquent ORM http://d.laravel-china.org/docs/5.4/eloquent
 $capsule = new Capsule;
 $capsule->addConnection(require BASE_PATH.'/config/database.php');
 $capsule->bootEloquent();
